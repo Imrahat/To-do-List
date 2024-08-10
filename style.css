@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+.container{  
+    width:100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,red,blue);
+    padding: 10px;
+}
+.todoApp{
+    width:100%;
+    max-width: 500px;
+    background-color: #fff;
+    margin:100px auto;
+    border-radius: 10px;
+    padding: 40px 30px 70px;
+    
+}
+.todoApp h2{
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items:center;
+}
+.todoApp h2 img{
+    width: 25px;
+    margin-left: 5px;
+}
+.row{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    border-radius: 20px;
+    border:2px solid black;
+    /* background: rgb(208, 192, 192); */
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+input{
+    flex:1;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-weight: 500;
+
+    background: transparent;
+
+}
+button{
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    border:2px solid black;
+    /* background: blue; */
+    border-radius: 40px;
+}
+button:hover{
+    /* background-color: black; */
+     border:2px solid red;
+     color:red;
+}
+#listContainer li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border:2px solid black;
+    /* background: rgb(208, 192, 192); */
+    margin-bottom: 10px;
+    /* text-align: center; */
+    padding: 10px 5px 10px 30px;
+    position: relative;
+    
+}
+#listContainer li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image:url(./svg/checked.png);
+    background-size: cover;
+    background-position: center;
+    /* top: 10px; */
+    left: 8px;
+    /* right: 2px; */
+}
+#listContainer li.checked{
+   
+ color:red;
+ text-decoration: line-through;
+}
+#listContainer li.checked::before{
+     background-image:url(./svg/uncheck.png);
+}
+ul li span{
+    position: absolute;
+    right: 7px;
+    top: 6px;
+     height: 20px;
+    width: 20px;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+    /* border-radius: 50%; */
+}
+ul li span:hover{
+    color:red;
+    font-weight: 400;
+}
+ 
